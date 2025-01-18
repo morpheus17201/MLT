@@ -50,9 +50,7 @@ However, if one of the points is not on the line passing through the other point
 
 The projection of this outlier point 
 $$
-\begin{bmatrix} 
-x_{1} \\ 
-x_{2} \\ 
+\begin{bmatrix}
+x_{1}\\
+x_{2}\\
 \end{bmatrix}
-$$
-
