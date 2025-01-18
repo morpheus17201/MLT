@@ -11,6 +11,21 @@ arr = np.ones(4) # creates 1d array with 4 ones => array([1., 1., 1., 1. ])
 
 The numpy arrays are vectors. e.g. the np.array([1, 2, 3]) creates 1d (column?) vector
 
+## Shape of array
+
+To get shape of vector
+
+```python
+# import numpy as np
+
+arr = np.array([1, 2, 3]) #passing pythong list as array
+arr.shape #shape is variable, not a member
+## the above command will output (3,)
+
+#The following relationship always holds good
+arr.shape[0] == len(arr) # will output True
+```
+
 ## Addition, Multiplication and Functions
 
 ```python
