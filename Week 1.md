@@ -15,18 +15,24 @@
   * Multi-armed Bandits
   * Reinforcement learning: mapping from state to action (policy). e.g. robot navigation to go from one end of the room to the other through obstacles
 
-  ### Examples
+### Examples
     
-  | __Problem__ | __Type of problem__ |
-  |-------------------------|-----------------|
-  | Spam vs non-spam | Binary classification |
-  | Forecasting rainfall | Regression |
-  | Recommending movies | Ordinal classification |
-  | Friend suggestions | Link Prediction |
-  | Voice/instrument speration | Unsupervised learning |
-  | Grouping pictures in phone | Clustering |
-  | Stock market prediction | online problem |
-  | Robot navigation | Reinforcement learning |
+|__Problem__|__Type of problem__|
+|-------------------------|-----------------|
+| Spam vs non-spam | Binary classification |
+| Forecasting rainfall | Regression |
+| Recommending movies | Ordinal classification |
+| Friend suggestions | Link Prediction |
+| Voice/instrument speration | Unsupervised learning |
+| Grouping pictures in phone | Clustering |
+| Stock market prediction | online problem |
+| Robot navigation | Reinforcement learning |
 
-
+## Smple example: Linear regression
+ 
+ |__Element__|__Role__|__Branch of Mathematics__|
+ |-------------|----------|---------------------------|
+ | * __Structure__ | Need to decide if this is linear data | Linear Algebra |
+ | * __Uncertainty__ | Probability/uncertainty - Probability |
+ | * __Decisions__ | Convert data to decision (maximize or minimize) - Optimization |
 
