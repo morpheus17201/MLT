@@ -107,3 +107,11 @@ $$
 170
 \end{bmatrix}
 $$
+
+This is achieved as below:
+
+```python
+A = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+x = np.array([6, 7, 8])
+C = A @ x
+```
