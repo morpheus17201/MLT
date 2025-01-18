@@ -52,8 +52,7 @@ The projection of this outlier point
 $$
 \begin{bmatrix} 
 x_{1} \\ 
-x_{2}\\ 
+x_{2} \\ 
 \end{bmatrix}
-
 $$
 
