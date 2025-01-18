@@ -28,11 +28,19 @@
 | Stock market prediction | online problem |
 | Robot navigation | Reinforcement learning |
 
-## Smple example: Linear regression
+### Smple example: Linear regression
  
  |__Element__|__Role__|__Branch of Mathematics__|
  |-------------|----------|---------------------------|
  | * __Structure__ | Need to decide if this is linear data | Linear Algebra |
- | * __Uncertainty__ | Probability/uncertainty - Probability |
- | * __Decisions__ | Convert data to decision (maximize or minimize) - Optimization |
+ | * __Uncertainty__ | Probability/uncertainty | Probability |
+ | * __Decisions__ | Convert data to decision (maximize or minimize) | Optimization |
 
+# Video 3: Unsupervised learning (representation learning)
+
+__Goal:__ Given a set of "data points", "understand" something "useful" about them.
+
+* Datapoints: Vectors in d-dimensions $R_{d}
+* Understand: "Comprehension is compression" - George Chaitin.\
+Comprehension - Understanding / learning
+*
