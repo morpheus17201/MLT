@@ -40,7 +40,7 @@
 
 __Goal:__ Given a set of "data points", "understand" something "useful" about them.
 
-* Datapoints: Vectors in d-dimensions $`R_{d}
+* Datapoints: Vectors in d-dimensions $R_{d}$
 * Understand: "Comprehension is compression" - George Chaitin.\
 Comprehension - Understanding / learning
  if we have 
