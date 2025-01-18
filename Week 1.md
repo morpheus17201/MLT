@@ -2,22 +2,22 @@
 
 ## Broad Paradigms of Machine Learning
 
-* Supervised learning
+* __Supervised learning__
   * Classication (Binary, Multiclass, Ordinal)
   * Regression
   * Ranking
   * Structure learning
-* Unsupervised learning: e.g. Automatically figuring out groups from data
+* __Unsupervised learning:__ e.g. Automatically figuring out groups from data
   * Clustering
   * Representation learning: How do I represent data point in the best possible so 'something' becomes easier. e.g. image can be represented as something better than just pixel values. (Note: Representation learning can also be done in some way in supervised setting)
-* Sequential learning: Don't learn in one shot but learn in sequential fashion. Not all the data is given. Feedback is the form of supervision. Get some data, predict, then get feedback and correct using the feedback.
+* __Sequential learning:__ Don't learn in one shot but learn in sequential fashion. Not all the data is given. Feedback is the form of supervision. Get some data, predict, then get feedback and correct using the feedback.
   * Online learning
   * Multi-armed Bandits
   * Reinforcement learning: mapping from state to action (policy). e.g. robot navigation to go from one end of the room to the other through obstacles
 
   ### Examples
     
-  | Problem | Type of problem |
+  | __Problem__ | __Type of problem__ |
   |-------------------------|-----------------|
   | Spam vs non-spam | Binary classification |
   | Forecasting rainfall | Regression |
