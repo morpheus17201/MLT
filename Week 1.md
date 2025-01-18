@@ -1,6 +1,4 @@
-# Week 1
-
-## Broad Paradigms of Machine Learning
+# Video 1 and 2: Broad Paradigms of Machine Learning
 
 * __Supervised learning__
   * Classication (Binary, Multiclass, Ordinal)
@@ -43,4 +41,12 @@ __Goal:__ Given a set of "data points", "understand" something "useful" about th
 * Datapoints: Vectors in d-dimensions $R_{d}$
 * Understand: "Comprehension is compression" - George Chaitin.\
 Comprehension - Understanding / learning
- if we have 
+
+## Projection of a point on the line
+To compress the dataset (i.e. to represent using fewer data points, if all the data points are on a single line, then we just need a scaling factors and one of the features for each of the data points and we can perefectly construct the data again.
+
+However, if one of the points is not on the line passing through the other points, then we need to find the projection of that point on the line passing through the remaining points.
+![image](https://github.com/user-attachments/assets/5ecc78f0-3439-4c9c-82ff-dc1eae671bee)
+
+The projection of this outlier point $\begin{bmatrix} x_{1} \\ x_{2} \end{bmatrix}$
+
