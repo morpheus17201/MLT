@@ -13,6 +13,20 @@
 * Sequential learning: Don't learn in one shot but learn in sequential fashion. Not all the data is given. Feedback is the form of supervision. Get some data, predict, then get feedback and correct using the feedback.
   * Online learning
   * Multi-armed Bandits
-  * Reinforcement learning
+  * Reinforcement learning: mapping from state to action (policy). e.g. robot navigation to go from one end of the room to the other through obstacles
+
+  ### Examples
+    
+  | Problem | Type of problem |
+  |-------------------------|-----------------|
+  | Spam vs non-spam | Binary classification |
+  | Forecasting rainfall | Regression |
+  | Recommending movies | Ordinal classification |
+  | Friend suggestions | Link Prediction |
+  | Voice/instrument speration | Unsupervised learning |
+  | Grouping pictures in phone | Clustering |
+  | Stock market prediction | online problem |
+  | Robot navigation | Reinforcement learning |
+
 
 
