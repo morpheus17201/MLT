@@ -48,11 +48,12 @@ To compress the dataset (i.e. to represent using fewer data points, if all the d
 However, if one of the points is not on the line passing through the other points, then we need to find the projection of that point on the line passing through the remaining points.
 ![image](https://github.com/user-attachments/assets/5ecc78f0-3439-4c9c-82ff-dc1eae671bee)
 
-The projection of this outlier point
+The projection of this outlier point $
+\begin{bmatrix} x_{1} &\\ x_{2} &\\ \end{bmatrix} $
 
 $$
 \begin{bmatrix}
-x_{1} &\\
-x_{2} &\\
+x_{1}\\
+x_{2}\\
 \end{bmatrix}
 $$
