@@ -225,6 +225,7 @@ Arguments for np.expand_dims
 - The second argument is the axis along which to increase, with 0 indexing. For a 2 dimensional matrix, dimension '0' means expand along rows and axis '1' means expand along columns (i.e. add empty columns)
 
 Thus, for adding a column vector to the matrix, we should use:
+
 ```python
 import numpy as np
 M = np.array([[1, 2, 3, 4], [5, 6, 7, 8]])
@@ -238,3 +239,121 @@ M + b
 # [[2, 3, 4, 5],
 #  [7, 8, 9, 10]]
 ```
+
+## Indexing and slicing an array
+
+The indexing for the array works in the same way for as that for a standard python list. Examples below:
+
+```python
+M = np.array([[1, 2], [3, 4], [5, 6], [7, 8], [9, 10]])
+# Get third row
+M[2] #array([5, 6])
+
+#Get second column
+M[:, 1] #array([ 2,  4,  6,  8, 10])
+
+#Get third and fourth rows
+M[2:4] #array([[5, 6],
+#              [7, 8]])
+
+#Get 2nd and 3rd elements in the first column
+M[1: 3, 0] #array([3, 5])
+
+```
+
+## Stacking of arrays
+
+Sometimes, we would want to stack arrays. Consider the two matrices:
+
+$$
+\mathbf{A} =
+\begin{bmatrix}
+1 & 2\\
+3 & 4
+\end{bmatrix},
+\mathbf{B} =
+\begin{bmatrix}
+5 & 6\\
+7 & 8
+\end{bmatrix}
+$$
+
+There are two ways to stack these two matrices:
+
+### Row-wise
+
+We could stack the two matrices along the rows, $\mathbf{A}$ on top of $\mathbf{B}$:
+
+$$
+\mathbf{C} =
+\begin{bmatrix}
+1 & 2\\
+3 & 4\\
+5 & 6\\
+7 & 8
+\end{bmatrix}
+$$
+
+This would be done as follows:
+```python
+C = np.concatenate((A, B), axis = 0) # axis=0 indicates rows in 2d matrix
+```
+
+### Column-wise
+
+We could stack the two matrices along the columns, $\mathbf{A}$ to the left of $\mathbf{B}$:
+
+$$
+\mathbf{C} =
+\begin{bmatrix}
+1 & 2 & 5 & 6\\
+3 & 4 & 7 & 8\\
+\end{bmatrix}
+$$
+
+This would be done as follows:
+
+```python
+C = np.concatenate((A, B), axis = 1) # axis = 1 indicates columns in 2d matrix
+```
+
+## SUM, MEAN and VARIANCE
+
+We can use np.sum() function or the ```.sum``` attribute to get the sum.
+- **Sum of Rows:** i.e. sum of 1st row, sum of 2nd row, etc then we are summing along the column, hence we need to indicate axis as '1'. The resulting vector will have the same shape as number of rows in the matrix
+
+$$
+\mathbf{A} = \begin{bmatrix}
+1 & 2 & 3 & 4\\
+5 & 6 & 7 & 8
+\end{bmatrix}
+$$
+
+The sum of the rows of the matrix is a vector:
+
+$$
+\text{rsum}(\mathbf{A}) = \begin{bmatrix}
+10\\
+26
+\end{bmatrix}
+$$
+
+In `NumPy` this can be done as follows:
+
+```python
+A = np.array([[1, 2, 3, 4], [5, 6, 7, 8]])
+row_sum = np.sum(A, axis=1) # outputs array([10,26])
+# or
+row_sum = A.sum(axis=1)
+
+```
+
+- **Sum of Columns:** i.e. sum of 1st col, sum of 2nd col, sum of 3rd col, etc. For getting the sum, we are summing across the rows, hence we need to indicate axis as 1. e.g.
+
+```python
+A = np.array([[1, 2, 3, 4], [5, 6, 7, 8]])
+col_sum = np.sum(A, axis=0) # outputs array([6, 8, 10, 12])
+# or
+col_sum = A.sum(axis=0)
+```
+Just like sum, we can also find out mean and variance along rows or columns
