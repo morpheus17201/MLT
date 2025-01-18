@@ -175,9 +175,29 @@ Thus, if we want to do row wise addition (i.e. add a vector to each row of matri
 
 ### Column-wise addition
 
-The technique above doesn't work for column-wise addition as numpy cannot broadcast to different shape as explained below.
+The technique above doesn't work for column-wise addition as numpy cannot broadcast to different shape as explained below. e.g. the below example doesn't work:
 
-When two arrays of different dimensions are combined together using an arithmetic operation such as `+`, `NumPy` sees if it can **broadcast** them. This is best understood with images. Here is an example from the `NumPy` docs on row-wise addition:
+
+$$
+\mathbf{M} = \begin{bmatrix}
+1 & 2 & 3 & 4\\
+5 & 6 & 7 & 8
+\end{bmatrix}, \mathbf{b} = \begin{bmatrix}
+1\\
+2
+\end{bmatrix}
+$$
+
+In the case, we have:
+
+$$
+\mathbf{M} + \mathbf{b} = \begin{bmatrix}
+2 & 3 & 4 & 5\\
+7 & 8 & 9 & 10
+\end{bmatrix}
+$$
+
+**Why??** When two arrays of different dimensions are combined together using an arithmetic operation such as `+`, `NumPy` sees if it can **broadcast** them. This is best understood with images. Here is an example from the `NumPy` docs on row-wise addition:
 
 ![](https://numpy.org/doc/stable/_images/broadcasting_2.png)
 
@@ -188,3 +208,33 @@ For column-wise addition, simple addition doesn't work:
 ![](https://numpy.org/doc/stable/_images/broadcasting_3.png)
 
 **Source**: https://numpy.org/doc/stable/user/basics.broadcasting.html
+
+To solve for this, we need to use ```np.expand_dims``` function. This function expands the dimension of the array.
+
+```python
+b = np.array([1, 2])
+# Shape of b is (2, ) i.e. 2 rows
+b = np.expand_dims(b, 1)
+# Shape of b becomes (2, 1) and b = [[1],
+#                                    [2]]
+```
+
+Arguments for np.expand_dims
+
+- The first argument to np.expand_dims is the array for which the dimensions need to be expanded.
+- The second argument is the axis along which to increase, with 0 indexing. For a 2 dimensional matrix, dimension '0' means expand along rows and axis '1' means expand along columns (i.e. add empty columns)
+
+Thus, for adding a column vector to the matrix, we should use:
+```python
+import numpy as np
+M = np.array([[1, 2, 3, 4], [5, 6, 7, 8]])
+b = np.array([1, 2])
+print('Shape of M:', M.shape)
+print('Shape of b before adding dimension:', b.shape)
+b = np.expand_dims(b, 1)
+print('Shape of b after adding dimension:', b.shape)
+M + b
+# this will give
+# [[2, 3, 4, 5],
+#  [7, 8, 9, 10]]
+```
